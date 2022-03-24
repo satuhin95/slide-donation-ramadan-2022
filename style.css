@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.absolute {
+    position: absolute;
+}
+.pp_wrapper {
+    height: 250px;
+    width: 300px;
+    background-image: url(images/img1.jpg);
+    background-size: 300px 250px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.pp_box_1,
+.pp_box_2 {
+    height: 250px;
+    width: 300px;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+.pp_box_2 {
+    background: url(images/img2.jpg);
+    z-index: 3;
+    opacity: 1;
+}
+.pp_box_1_hand {
+    height: 31px;
+    width: 38px;
+    top: 206px;
+    left: 80px;
+    /*left: 75px;*/
+}
+.pp_box_1_text {
+    height: 49px;
+    width: 130px;
+    top: 50px;
+    left: 25px;
+}
+.pp_box_1_dust {
+    height: 32px;
+    width: 152px;
+     top: 205px;
+    left: 74px;
+}
+.pp_box_1_dust .dust_img {
+    clip-path: polygon(0px 0, 100% 0, 100% 100%, 0px 100%);
+}
+.pp_box_2_text {
+    height: 55px;
+    width: 170px;
+    top: 50px;
+    left: -170px;
+    /*opacity: 0;*/
+}
+.pp_box_2_2 {
+    height: 27px;
+    width: 125px;
+    top: 208px;
+    left: 88px;
+    /*opacity: 0;*/
+}
+.pp_box_2_product {
+    height: 154px;
+    width: 130px;
+    top: 70px;
+    left: 160px;
+}
+.popin {
+    animation: popin 1s linear;
+    animation-fill-mode: both;
+}
+.bottle {
+    animation: bottle 3s ease-in-out infinite;
+}
+.fadeInZoom {
+    animation: fadeInZoom infinite;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+.zoomInOut {
+    opacity: 1;
+    animation-name: zoomInOut;
+    animation-duration: 1.12s;
+    animation-fill-mode: both;
+    animation-delay: 1.48s;
+    animation-iteration-count: infinite;
+}
+@keyframes popin {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(0.33);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes bottle {
+    0% {
+        transform: rotateZ(0);
+    }
+    10% {
+        transform: rotateZ(-3deg);
+    }
+    20% {
+        transform: rotateZ(3deg);
+    }
+    30% {
+        transform: rotateZ(-3deg);
+    }
+    40% {
+        transform: rotateZ(3deg);
+    }
+    50% {
+        transform: rotateZ(-3deg);
+    }
+    60% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+@keyframes fadeInZoom {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale3d(0.9, 0.9, 0.9) translate3d(0, 10px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+@keyframes zoomInOut {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    25% {
+        transform: scale3d(0.85, 0.85, 0.85);
+    }
+    50% {
+        transform: scale3d(1, 1, 1);
+    }
+    75% {
+        transform: scale3d(0.85, 0.85, 0.85);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.hidden {
+    display: none;
+}
+
+@keyframes leftAnimi{
+    0%{
+        left: -170px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+/*.leftAnimi{
+    animation-name: leftAnimi;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}*/
